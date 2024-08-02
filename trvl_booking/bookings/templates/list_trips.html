@@ -1,0 +1,8 @@
+<h1>لیست سفرها</h1>
+<ul>
+    {% for trip in trips %}
+        <li>{{ trip.destination }} - <a href="{% url 'update_trip' trip.pk %}">ویرایش</a> -
+        <a href="{% url 'confirm_delete' trip.pk %}">حذف</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_trip' %}">سفر جدید</a>

@@ -1,0 +1,7 @@
+<h1>تأیید حذف سفر</h1>
+<p>آیا مطمئن هستید که می‌خواهید "{{ trip.destination }}" را حذف کنید؟</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">حذف</button>
+</form>
+<a href="{% url 'list_trips' %}">لغو</a>
