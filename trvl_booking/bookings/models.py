@@ -10,4 +10,4 @@ class Trip(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.destination
+        return f"{self.destination} ({self.departure_date} to {self.return_date})"
